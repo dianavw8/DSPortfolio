@@ -5,6 +5,16 @@ import FooterPortfolio from './components/FooterPortfolio';
 import ProjectPortfolio from './components/ProjectPortfolio';
 import React, { useState, useEffect } from 'react';
 import AboutMe from './components/AboutMe';
+import { NextUIProvider } from '@nextui-org/react';
+import { Button, Input } from '@nextui-org/react';
+
+function App({ Component }) {
+  return (
+    <NextUIProvider>
+      <Component />
+    </NextUIProvider>
+  );
+}
 
 function App() {
 
