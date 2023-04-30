@@ -1,13 +1,13 @@
 import * as React from 'react';
-import { NextUIProvider } from '@nextui-org/react';
-import MyComponent from './MyComponent';
 
-function App() {
+// 1. import `NextUIProvider` component
+import { NextUIProvider } from '@nextui-org/react';
+
+function App({ Main }) {
+  // 2. Use at the root of your app
   return (
     <NextUIProvider>
-      <MyComponent />
+      <Main />
     </NextUIProvider>
   );
 }
-
-export default App;
