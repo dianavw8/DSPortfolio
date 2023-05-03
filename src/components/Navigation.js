@@ -1,24 +1,32 @@
-//import logo from './logo.svg';
-//import './HeaderPortfolio.css';
 import React, { useState, useEffect } from 'react';
-import { Navbar, Button, Link, Text, Card, Radio } from "@nextui-org/react";
+import { Navbar, Text, } from "@nextui-org/react";
+import { Link } from 'react-router-dom';
 
 
 
 function NavigationPortfolio() {
   
     return (
-      <Navbar isBordered>
+      <Navbar isBordered variant={"sticky"} activeColor={"secondary"} activeVariant={"highlight-solid-rounded"}> 
+      {/* added activeColor and activeVariant but no change in display. */}
         <Navbar.Brand>
-          <Text b color="inherit" hideIn="xs">
+          <Text b color="inherit" hideIn="md">
             Diana Santacruz
           </Text>
         </Navbar.Brand>
         <Navbar.Content hideIn="xs">
-          <Navbar.Link href="#">About Me</Navbar.Link>
-          <Navbar.Link isActive href="#">Projects</Navbar.Link>
-          <Navbar.Link href="#">Resume</Navbar.Link>
-          <Navbar.Link href="#">Contact</Navbar.Link>
+        <Link to="/about-me">
+          <Navbar.Link>About Me</Navbar.Link>
+        </Link>
+        <Link to="/projects">
+          <Navbar.Link>Projects</Navbar.Link>
+        </Link>
+        <Link to="/resume">
+          <Navbar.Link>Resume</Navbar.Link>
+        </Link>
+        <Link to="/contact">
+          <Navbar.Link>Contact</Navbar.Link>
+        </Link>
         </Navbar.Content>
       </Navbar>
     );

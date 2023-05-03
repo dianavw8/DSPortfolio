@@ -1,40 +1,34 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import * as React from 'react';
 import Navigation from './components/Navigation';
+import { createTheme, NextUIProvider } from "@nextui-org/react";
+import AboutMe from './components/AboutMe';
 
-// 1. import `NextUIProvider` component
-import { NextUIProvider } from '@nextui-org/react';
+
+
+
+
+const darkTheme = createTheme({
+  type: 'dark',
+});
+
 
 function App() {
   // 2. Use at the root of your app
+
   return (
-    <NextUIProvider>
-      <Navigation/>
-    </NextUIProvider>
+
+      <NextUIProvider theme={darkTheme}>
+       <Router>
+        <Navigation/>
+          <Routes>
+            <Route path="/about-me" element={<AboutMe />} />
+          </Routes>
+        </Router>
+      </NextUIProvider>
+        
   );
 }
-
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;
