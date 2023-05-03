@@ -9,6 +9,7 @@ function AboutMe() {
           <Text
             h1
             size={30}
+            fonts= {"Menlo"}
             css={{
               textGradient: "45deg, $blue600 -20%, $pink600 50%",
             }}
@@ -17,7 +18,7 @@ function AboutMe() {
             ABOUT ME
           </Text>
           <hr className="divider-line"/>
-          <img className="not-grey big-img" src={`${process.env.PUBLIC_URL}/assets/four_leaf_clover.jpg`} alt="avatar"/>
+          <img  className="not-grey big-img" src={`${process.env.PUBLIC_URL}/four_leaf_clover.jpg`} alt="avatar" />
           <hr className="divider-line"/>
           <Text
             h1
