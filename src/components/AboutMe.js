@@ -1,5 +1,6 @@
 import { Text, Grid } from "@nextui-org/react";
 import React from 'react';
+import { Link } from "@nextui-org/react";
 
 function AboutMe() {
   return (
@@ -17,7 +18,6 @@ function AboutMe() {
           >
             ABOUT ME
           </Text>
-          <hr className="divider-line"/>
           <img  className="not-grey big-img" src={`${process.env.PUBLIC_URL}/four_leaf_clover.jpg`} alt="avatar" />
           <hr className="divider-line"/>
           <Text
@@ -38,7 +38,8 @@ function AboutMe() {
             }}
             weight="bold"
           >
-            Please click on "Projects" to view some of my work.
+            <Link color="secondary" href="#projects">
+            Please check out the "Projects" tab above to view some of my work, or simply click on this link. </Link>
           </Text>
         </Grid>
       </Grid>

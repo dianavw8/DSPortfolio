@@ -10,16 +10,16 @@ function NavigationPortfolio() {
       <Navbar isBordered variant={"sticky"} activeColor={"secondary"} activeVariant={"highlight-solid-rounded"}> 
       {/* added activeColor and activeVariant but no change in display. */}
         <Navbar.Brand>
-          <Text b color="inherit" hideIn="md">
+          <Text b color="$pink500" fontSizes="1.125rem" hideIn="md">
             Diana Santacruz
           </Text>
         </Navbar.Brand>
         <Navbar.Content hideIn="xs">
-        <Link to="/about-me">
+        <Link to="/">
           <Navbar.Link>About Me</Navbar.Link>
         </Link>
         <Link to="/projects">
-          <Navbar.Link>Projects</Navbar.Link>
+          <Navbar.Link id="projects">Projects</Navbar.Link>
         </Link>
         <Link to="/resume">
           <Navbar.Link>Resume</Navbar.Link>
